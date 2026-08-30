@@ -1,0 +1,9 @@
+# Simulation (OpenMM)
+openmm>=8.0
+pdbfixer
+numpy
+
+# Analysis
+mdtraj
+scipy
+matplotlib

@@ -1,0 +1,22 @@
+# Byte-compiled
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+
+# Simulation artifacts (not part of this code snapshot)
+output/
+output_*/
+*.chk
+*.xtc
+*.dcd
+gpu.lock
+*.done
+prod.log
+prod_thermo.csv
+temperature.log
+
+# Local editor
+.DS_Store
+.idea/
+.vscode/

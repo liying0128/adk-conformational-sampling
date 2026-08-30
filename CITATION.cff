@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: Apo AdK conformational sampling benchmark
+message: If you use this software, please cite the article and this repository.
+type: software
+authors:
+  - family-names: Zhao
+    given-names: Qingling
+    affiliation: Beijing Union University
+  - family-names: Cui
+    given-names: Ting
+    affiliation: Beijing Union University
+  - family-names: Li
+    given-names: Ying
+    affiliation: Beijing Union University
+    email: liying0128@buu.edu.cn
+keywords:
+  - adenylate kinase
+  - molecular dynamics
+  - metadynamics
+  - conformational sampling
+  - OpenMM
+license: MIT

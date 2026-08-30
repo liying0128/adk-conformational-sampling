@@ -1,0 +1,731 @@
+{
+  "system": "apo E. coli AdK (4AKE chain A)",
+  "note": "TMD is nonequilibrium (biased toward 1AKE). WT-MetaD / blind / wrong-CV FES traces are biased occupancy, not reweighted \u0394G. Method D uses open\u2192closed interpolations. Method I is BioEmu generative models plus 300 ns MD relaxation (6 \u00d7 50 ns).",
+  "crystal": {
+    "open": {
+      "d_nmp": 2.2287397384643555,
+      "d_lid": 3.0806057453155518,
+      "rmsd_open": 0.0,
+      "rmsd_closed": 0.7130697965621948
+    },
+    "closed": {
+      "d_nmp": 1.8185715675354004,
+      "d_lid": 2.0978076457977295,
+      "rmsd_open": 0.7130693793296814,
+      "rmsd_closed": 0.0
+    }
+  },
+  "thresholds_nm": {
+    "mid_nmp": 2.023655652999878,
+    "mid_lid": 2.5892066955566406,
+    "open_rmsd_cut": 0.35,
+    "closed_rmsd_cut": 0.35,
+    "bin_nm": 0.05
+  },
+  "pca_var_ratio": [
+    0.46602949500083923,
+    0.23602761328220367
+  ],
+  "methods": {
+    "A_unbiased": {
+      "title": "A unbiased MD",
+      "n_frames": 3009,
+      "sampled_ns": 300.9,
+      "ns_per_day": 534.0,
+      "gpu_hours_eq": 13.52,
+      "wall_hours_log": 13.52,
+      "E_pot_mean": -543491.1,
+      "T_mean": 300.95,
+      "d_nmp_mean": 2.225,
+      "d_nmp_min": 1.94,
+      "d_nmp_max": 2.471,
+      "d_lid_mean": 2.84,
+      "d_lid_min": 2.249,
+      "d_lid_max": 3.561,
+      "rmsd_open_min": 0.106,
+      "rmsd_open_mean": 0.265,
+      "rmsd_closed_min": 0.386,
+      "rmsd_closed_mean": 0.657,
+      "occupied_bins": 212,
+      "coverage_vs_ns": {
+        "50": 92,
+        "100": 143,
+        "200": 186,
+        "300": 210
+      },
+      "frac_quad": {
+        "OO": 0.7381,
+        "OC": 0.001,
+        "CO": 0.2466,
+        "CC": 0.0143
+      },
+      "frac_rmsd": {
+        "open": 0.8152,
+        "closed": 0.0,
+        "intermediate": 0.1848
+      },
+      "n_quad_transitions": 210,
+      "n_rmsd_transitions": 258,
+      "cv_pearson": 0.093,
+      "mixed_quad_frac": 0.2476,
+      "rmsf_mean_A": 1.004,
+      "rmsf_lid_A": 2.739,
+      "rmsf_nmp_A": 1.326,
+      "rmsf_core_A": 0.486,
+      "hit_closed_ns": null,
+      "hit_open_ns": 0.0,
+      "knowledge": "none (apo MD)"
+    },
+    "B_metad": {
+      "title": "B WT-MetaD",
+      "n_frames": 3000,
+      "sampled_ns": 300.0,
+      "ns_per_day": 441.0,
+      "gpu_hours_eq": 16.33,
+      "wall_hours_log": 16.33,
+      "E_pot_mean": -543278.5,
+      "T_mean": 301.06,
+      "d_nmp_mean": 2.591,
+      "d_nmp_min": 1.721,
+      "d_nmp_max": 4.114,
+      "d_lid_mean": 3.108,
+      "d_lid_min": 1.614,
+      "d_lid_max": 4.539,
+      "rmsd_open_min": 0.142,
+      "rmsd_open_mean": 0.933,
+      "rmsd_closed_min": 0.289,
+      "rmsd_closed_mean": 1.315,
+      "occupied_bins": 1260,
+      "coverage_vs_ns": {
+        "50": 387,
+        "100": 612,
+        "200": 892,
+        "300": 1260
+      },
+      "frac_quad": {
+        "OO": 0.699,
+        "OC": 0.025,
+        "CO": 0.262,
+        "CC": 0.014
+      },
+      "frac_rmsd": {
+        "open": 0.0853,
+        "closed": 0.0043,
+        "intermediate": 0.9103
+      },
+      "n_quad_transitions": 129,
+      "n_rmsd_transitions": 77,
+      "cv_pearson": 0.0,
+      "mixed_quad_frac": 0.287,
+      "rmsf_mean_A": 3.361,
+      "rmsf_lid_A": 9.029,
+      "rmsf_nmp_A": 4.474,
+      "rmsf_core_A": 1.657,
+      "hit_closed_ns": 20.8,
+      "hit_open_ns": 0.0,
+      "knowledge": "functional CVs (LID/NMP\u2013CORE COM)"
+    },
+    "C_tmd": {
+      "title": "C targeted MD",
+      "n_frames": 3083,
+      "sampled_ns": 308.3,
+      "ns_per_day": 465.0,
+      "gpu_hours_eq": 15.91,
+      "wall_hours_log": 15.91,
+      "E_pot_mean": -543388.1,
+      "T_mean": 300.81,
+      "d_nmp_mean": 2.01,
+      "d_nmp_min": 1.785,
+      "d_nmp_max": 2.408,
+      "d_lid_mean": 2.437,
+      "d_lid_min": 1.932,
+      "d_lid_max": 3.408,
+      "rmsd_open_min": 0.113,
+      "rmsd_open_mean": 0.515,
+      "rmsd_closed_min": 0.128,
+      "rmsd_closed_mean": 0.383,
+      "occupied_bins": 213,
+      "coverage_vs_ns": {
+        "50": 63,
+        "100": 133,
+        "200": 211,
+        "300": 213
+      },
+      "frac_quad": {
+        "OO": 0.289,
+        "OC": 0.0032,
+        "CO": 0.1885,
+        "CC": 0.5193
+      },
+      "frac_rmsd": {
+        "open": 0.2767,
+        "closed": 0.5488,
+        "intermediate": 0.1745
+      },
+      "n_quad_transitions": 130,
+      "n_rmsd_transitions": 106,
+      "cv_pearson": 0.758,
+      "mixed_quad_frac": 0.1917,
+      "rmsf_mean_A": 1.373,
+      "rmsf_lid_A": 3.636,
+      "rmsf_nmp_A": 2.218,
+      "rmsf_core_A": 0.611,
+      "hit_closed_ns": 128.70000000000002,
+      "hit_open_ns": 0.0,
+      "knowledge": "closed crystal 1AKE"
+    },
+    "D_ensemble": {
+      "title": "D interpolation MD",
+      "n_frames": 3000,
+      "sampled_ns": 300.0,
+      "ns_per_day": 532.5,
+      "gpu_hours_eq": 13.52,
+      "wall_hours_log": 13.52,
+      "E_pot_mean": -543440.1,
+      "T_mean": 301.04,
+      "d_nmp_mean": 2.122,
+      "d_nmp_min": 1.76,
+      "d_nmp_max": 2.429,
+      "d_lid_mean": 2.768,
+      "d_lid_min": 2.106,
+      "d_lid_max": 3.558,
+      "rmsd_open_min": 0.118,
+      "rmsd_open_mean": 0.378,
+      "rmsd_closed_min": 0.306,
+      "rmsd_closed_mean": 0.631,
+      "occupied_bins": 254,
+      "coverage_vs_ns": {
+        "50": 103,
+        "100": 126,
+        "200": 182,
+        "300": 254
+      },
+      "frac_quad": {
+        "OO": 0.6313,
+        "OC": 0.1027,
+        "CO": 0.1827,
+        "CC": 0.0833
+      },
+      "frac_rmsd": {
+        "open": 0.601,
+        "closed": 0.0037,
+        "intermediate": 0.3953
+      },
+      "n_quad_transitions": 396,
+      "n_rmsd_transitions": 262,
+      "cv_pearson": 0.417,
+      "mixed_quad_frac": 0.2853,
+      "rmsf_mean_A": 1.373,
+      "rmsf_lid_A": 3.889,
+      "rmsf_nmp_A": 2.37,
+      "rmsf_core_A": 0.514,
+      "hit_closed_ns": 0.0,
+      "hit_open_ns": 0.0,
+      "knowledge": "open + closed crystals (interpolation)"
+    },
+    "E_stemper": {
+      "title": "E simulated tempering",
+      "n_frames": 3000,
+      "sampled_ns": 300.0,
+      "ns_per_day": 519.0,
+      "gpu_hours_eq": 13.87,
+      "wall_hours_log": 13.87,
+      "E_pot_mean": -513388.7,
+      "T_mean": 343.65,
+      "d_nmp_mean": 2.2,
+      "d_nmp_min": 1.94,
+      "d_nmp_max": 2.488,
+      "d_lid_mean": 3.446,
+      "d_lid_min": 2.549,
+      "d_lid_max": 4.152,
+      "rmsd_open_min": 0.135,
+      "rmsd_open_mean": 0.428,
+      "rmsd_closed_min": 0.583,
+      "rmsd_closed_mean": 0.963,
+      "occupied_bins": 268,
+      "coverage_vs_ns": {
+        "50": 135,
+        "100": 158,
+        "200": 193,
+        "300": 268
+      },
+      "frac_quad": {
+        "OO": 0.987,
+        "OC": 0.0123,
+        "CO": 0.0007,
+        "CC": 0.0
+      },
+      "frac_rmsd": {
+        "open": 0.238,
+        "closed": 0.0,
+        "intermediate": 0.762
+      },
+      "n_quad_transitions": 58,
+      "n_rmsd_transitions": 319,
+      "cv_pearson": -0.066,
+      "mixed_quad_frac": 0.013,
+      "rmsf_mean_A": 1.616,
+      "rmsf_lid_A": 4.699,
+      "rmsf_nmp_A": 1.642,
+      "rmsf_core_A": 0.808,
+      "hit_closed_ns": null,
+      "hit_open_ns": 0.0,
+      "knowledge": "none (T ladder 300\u2013400 K)"
+    },
+    "F_gamd": {
+      "title": "F dihedral GaMD",
+      "n_frames": 3000,
+      "sampled_ns": 300.0,
+      "ns_per_day": 494.0,
+      "gpu_hours_eq": 14.57,
+      "wall_hours_log": 14.57,
+      "E_pot_mean": -543370.2,
+      "T_mean": 300.98,
+      "d_nmp_mean": 2.121,
+      "d_nmp_min": 1.954,
+      "d_nmp_max": 2.353,
+      "d_lid_mean": 2.764,
+      "d_lid_min": 2.088,
+      "d_lid_max": 3.659,
+      "rmsd_open_min": 0.123,
+      "rmsd_open_mean": 0.502,
+      "rmsd_closed_min": 0.348,
+      "rmsd_closed_mean": 0.657,
+      "occupied_bins": 198,
+      "coverage_vs_ns": {
+        "50": 108,
+        "100": 134,
+        "200": 179,
+        "300": 198
+      },
+      "frac_quad": {
+        "OO": 0.56,
+        "OC": 0.0243,
+        "CO": 0.4013,
+        "CC": 0.0143
+      },
+      "frac_rmsd": {
+        "open": 0.2303,
+        "closed": 0.0003,
+        "intermediate": 0.7693
+      },
+      "n_quad_transitions": 184,
+      "n_rmsd_transitions": 215,
+      "cv_pearson": 0.321,
+      "mixed_quad_frac": 0.4257,
+      "rmsf_mean_A": 1.409,
+      "rmsf_lid_A": 4.409,
+      "rmsf_nmp_A": 1.224,
+      "rmsf_core_A": 0.666,
+      "hit_closed_ns": 199.70000000000002,
+      "hit_open_ns": 0.0,
+      "knowledge": "none (dihedral boost)"
+    },
+    "G_blind": {
+      "title": "G blind MetaD",
+      "n_frames": 3000,
+      "sampled_ns": 300.0,
+      "ns_per_day": 431.0,
+      "gpu_hours_eq": 16.71,
+      "wall_hours_log": 16.71,
+      "E_pot_mean": -543353.6,
+      "T_mean": 300.95,
+      "d_nmp_mean": 2.329,
+      "d_nmp_min": 1.878,
+      "d_nmp_max": 2.635,
+      "d_lid_mean": 3.097,
+      "d_lid_min": 1.949,
+      "d_lid_max": 4.666,
+      "rmsd_open_min": 0.157,
+      "rmsd_open_mean": 0.745,
+      "rmsd_closed_min": 0.243,
+      "rmsd_closed_mean": 1.12,
+      "occupied_bins": 494,
+      "coverage_vs_ns": {
+        "50": 235,
+        "100": 305,
+        "200": 398,
+        "300": 494
+      },
+      "frac_quad": {
+        "OO": 0.7203,
+        "OC": 0.0203,
+        "CO": 0.2483,
+        "CC": 0.011
+      },
+      "frac_rmsd": {
+        "open": 0.0797,
+        "closed": 0.0093,
+        "intermediate": 0.911
+      },
+      "n_quad_transitions": 139,
+      "n_rmsd_transitions": 85,
+      "cv_pearson": 0.297,
+      "mixed_quad_frac": 0.2687,
+      "rmsf_mean_A": 2.81,
+      "rmsf_lid_A": 9.453,
+      "rmsf_nmp_A": 2.48,
+      "rmsf_core_A": 1.149,
+      "hit_closed_ns": 20.700000000000003,
+      "hit_open_ns": 0.0,
+      "knowledge": "generic CVs (Rg + RMSD to start)"
+    },
+    "H_wrong": {
+      "title": "H wrong-CV MetaD",
+      "n_frames": 3000,
+      "sampled_ns": 300.0,
+      "ns_per_day": 442.0,
+      "gpu_hours_eq": 16.29,
+      "wall_hours_log": 16.29,
+      "E_pot_mean": -543248.3,
+      "T_mean": 301.11,
+      "d_nmp_mean": 2.177,
+      "d_nmp_min": 1.896,
+      "d_nmp_max": 2.466,
+      "d_lid_mean": 2.704,
+      "d_lid_min": 2.125,
+      "d_lid_max": 3.661,
+      "rmsd_open_min": 0.112,
+      "rmsd_open_mean": 0.422,
+      "rmsd_closed_min": 0.347,
+      "rmsd_closed_mean": 0.604,
+      "occupied_bins": 249,
+      "coverage_vs_ns": {
+        "50": 121,
+        "100": 161,
+        "200": 216,
+        "300": 249
+      },
+      "frac_quad": {
+        "OO": 0.532,
+        "OC": 0.0233,
+        "CO": 0.409,
+        "CC": 0.0357
+      },
+      "frac_rmsd": {
+        "open": 0.443,
+        "closed": 0.0003,
+        "intermediate": 0.5567
+      },
+      "n_quad_transitions": 239,
+      "n_rmsd_transitions": 187,
+      "cv_pearson": 0.08,
+      "mixed_quad_frac": 0.4323,
+      "rmsf_mean_A": 1.587,
+      "rmsf_lid_A": 4.374,
+      "rmsf_nmp_A": 1.637,
+      "rmsf_core_A": 0.851,
+      "hit_closed_ns": 275.3,
+      "hit_open_ns": 0.0,
+      "knowledge": "wrong CVs (intra-CORE distances)"
+    },
+    "I_bioemu": {
+      "title": "I BioEmu + MD",
+      "n_frames": 3000,
+      "sampled_ns": 300.0,
+      "ns_per_day": 530.0,
+      "gpu_hours_eq": 13.58,
+      "wall_hours_log": 13.58,
+      "E_pot_mean": -543348.3,
+      "T_mean": 300.92,
+      "d_nmp_mean": 2.126,
+      "d_nmp_min": 1.852,
+      "d_nmp_max": 2.503,
+      "d_lid_mean": 2.792,
+      "d_lid_min": 2.086,
+      "d_lid_max": 3.786,
+      "rmsd_open_min": 0.172,
+      "rmsd_open_mean": 0.583,
+      "rmsd_closed_min": 0.331,
+      "rmsd_closed_mean": 0.732,
+      "occupied_bins": 247,
+      "coverage_vs_ns": {
+        "50": 79,
+        "100": 128,
+        "200": 190,
+        "300": 247
+      },
+      "frac_quad": {
+        "OO": 0.5653,
+        "OC": 0.115,
+        "CO": 0.313,
+        "CC": 0.0067
+      },
+      "frac_rmsd": {
+        "open": 0.0447,
+        "closed": 0.0003,
+        "intermediate": 0.955
+      },
+      "n_quad_transitions": 159,
+      "n_rmsd_transitions": 89,
+      "cv_pearson": 0.145,
+      "mixed_quad_frac": 0.428,
+      "rmsf_mean_A": 1.838,
+      "rmsf_lid_A": 5.818,
+      "rmsf_nmp_A": 2.75,
+      "rmsf_core_A": 0.615,
+      "hit_closed_ns": 0.0,
+      "hit_open_ns": 0.0,
+      "knowledge": "sequence only, then unbiased MD"
+    }
+  },
+  "unbiased_fes_kJ": {
+    "open_basin": 0.0,
+    "closed_basin": null,
+    "deltaG_closed_minus_open": null,
+    "comment": "Histogram FES from unbiased MD occupancy; empty bins are unseen, not infinite. If closed basin is NaN/absent, 300 ns unbiased MD did not visit closed-like CVs."
+  },
+  "metad_fes_kJ": {
+    "open_crystal": 29.25,
+    "closed_crystal": 75.44,
+    "grid_min": 0.0,
+    "grid_p95": 129.34,
+    "deltaG_closed_minus_open": 46.19
+  },
+  "tmd_path": {
+    "first_LID_closed_ns": 83.60000000000001,
+    "first_NMP_closed_ns": 24.6,
+    "final_rmsd_closed_nm": 0.15714187920093536,
+    "min_rmsd_closed_nm": 0.12795409560203552,
+    "initial_rmsd_closed_nm": 0.8145179748535156,
+    "domain_order": "NMP-first"
+  },
+  "stemper_ladder": {
+    "n_samples": 3000,
+    "frac_by_state": [
+      0.1797,
+      0.1637,
+      0.1037,
+      0.097,
+      0.139,
+      0.1553,
+      0.0707,
+      0.091
+    ],
+    "temps_K": [
+      300.0,
+      312.6,
+      325.7,
+      339.4,
+      353.6,
+      368.4,
+      383.9,
+      400.0
+    ],
+    "frac_Tmin": 0.1797,
+    "frac_Tmax": 0.091
+  },
+  "bioemu_generated": {
+    "n_models": 6,
+    "d_nmp": [
+      2.082,
+      1.895,
+      1.981,
+      2.034,
+      1.975,
+      2.063
+    ],
+    "d_lid": [
+      2.203,
+      2.439,
+      2.31,
+      2.33,
+      2.055,
+      2.1
+    ],
+    "rmsd_open_A": [
+      5.07,
+      6.19,
+      5.8,
+      5.09,
+      7.37,
+      6.42
+    ],
+    "rmsd_closed_A": [
+      3.3,
+      2.85,
+      2.71,
+      3.81,
+      2.11,
+      1.94
+    ],
+    "min_rmsd_closed_A": 1.94,
+    "n_closed_like": 5
+  },
+  "radar": {
+    "A_unbiased": {
+      "coverage": 0.16825396825396827,
+      "flexibility": 0.2987206188634335,
+      "reach_open": 0.851346863190725,
+      "reach_closed": 0.45867851665999904,
+      "efficiency": 1.0,
+      "path_info": 0.5727504048114734
+    },
+    "B_metad": {
+      "coverage": 1.0,
+      "flexibility": 1.0,
+      "reach_open": 0.8008608921988957,
+      "reach_closed": 0.5947100811262688,
+      "efficiency": 0.8258426966292135,
+      "path_info": 0.6638908165625722
+    },
+    "C_tmd": {
+      "coverage": 0.16904761904761906,
+      "flexibility": 0.4085093722106516,
+      "reach_open": 0.8415301466089803,
+      "reach_closed": 0.8204944303950256,
+      "efficiency": 0.8707865168539326,
+      "path_info": 0.44344205412907706
+    },
+    "D_ensemble": {
+      "coverage": 0.2015873015873016,
+      "flexibility": 0.4085093722106516,
+      "reach_open": 0.8345182061934485,
+      "reach_closed": 0.5708694976631081,
+      "efficiency": 0.9971910112359551,
+      "path_info": 0.6599583622484385
+    },
+    "E_stemper": {
+      "coverage": 0.2126984126984127,
+      "flexibility": 0.48080928295150255,
+      "reach_open": 0.8106776087806402,
+      "reach_closed": 0.18240822593984318,
+      "efficiency": 0.9719101123595506,
+      "path_info": 0.030071709461022434
+    },
+    "F_gamd": {
+      "coverage": 0.15714285714285714,
+      "flexibility": 0.419220470098185,
+      "reach_open": 0.8275062657779166,
+      "reach_closed": 0.5119692326364759,
+      "efficiency": 0.9250936329588015,
+      "path_info": 0.9847328244274809
+    },
+    "G_blind": {
+      "coverage": 0.39206349206349206,
+      "flexibility": 0.8360606962213627,
+      "reach_open": 0.7798250709523001,
+      "reach_closed": 0.6592198952030563,
+      "efficiency": 0.8071161048689138,
+      "path_info": 0.621559102475133
+    },
+    "H_wrong": {
+      "coverage": 0.1976190476190476,
+      "flexibility": 0.47218089854210055,
+      "reach_open": 0.8429325346920867,
+      "reach_closed": 0.5133716198990148,
+      "efficiency": 0.8277153558052435,
+      "path_info": 1.0
+    },
+    "I_bioemu": {
+      "coverage": 0.19603174603174603,
+      "flexibility": 0.546861053257959,
+      "reach_open": 0.7587892497057046,
+      "reach_closed": 0.5358098160996365,
+      "efficiency": 0.9925093632958801,
+      "path_info": 0.9900532037936618
+    }
+  },
+  "comparison": {
+    "axes": [
+      "Reach closed: min C\u03b1 RMSD to 1AKE and fraction of frames < 3.5 \u00c5",
+      "Coverage of functional CV plane (NMP\u2013CORE vs LID\u2013CORE occupied bins)",
+      "Over-opening: max LID\u2013CORE vs crystal open 3.08 nm",
+      "Knowledge required (sequence / CVs / closed crystal)",
+      "Path information: mixed OC/CO quadrants and TMD domain order",
+      "Efficiency: ns/day and equivalent GPU hours for ~300 ns"
+    ],
+    "ranked_by_closed_rmsd": [
+      {
+        "key": "C_tmd",
+        "title": "C targeted MD",
+        "reach_closed_A": 1.28,
+        "frac_closed": 0.5488,
+        "occupied_bins": 213,
+        "overopen_lid_nm": 3.408,
+        "gpu_hours": 15.91,
+        "knowledge": "closed crystal 1AKE"
+      },
+      {
+        "key": "G_blind",
+        "title": "G blind MetaD",
+        "reach_closed_A": 2.43,
+        "frac_closed": 0.0093,
+        "occupied_bins": 494,
+        "overopen_lid_nm": 4.666,
+        "gpu_hours": 16.71,
+        "knowledge": "generic CVs (Rg + RMSD to start)"
+      },
+      {
+        "key": "B_metad",
+        "title": "B WT-MetaD",
+        "reach_closed_A": 2.89,
+        "frac_closed": 0.0043,
+        "occupied_bins": 1260,
+        "overopen_lid_nm": 4.539,
+        "gpu_hours": 16.33,
+        "knowledge": "functional CVs (LID/NMP\u2013CORE COM)"
+      },
+      {
+        "key": "D_ensemble",
+        "title": "D interpolation MD",
+        "reach_closed_A": 3.06,
+        "frac_closed": 0.0037,
+        "occupied_bins": 254,
+        "overopen_lid_nm": 3.558,
+        "gpu_hours": 13.52,
+        "knowledge": "open + closed crystals (interpolation)"
+      },
+      {
+        "key": "I_bioemu",
+        "title": "I BioEmu + MD",
+        "reach_closed_A": 3.31,
+        "frac_closed": 0.0003,
+        "occupied_bins": 247,
+        "overopen_lid_nm": 3.786,
+        "gpu_hours": 13.58,
+        "knowledge": "sequence only, then unbiased MD"
+      },
+      {
+        "key": "H_wrong",
+        "title": "H wrong-CV MetaD",
+        "reach_closed_A": 3.47,
+        "frac_closed": 0.0003,
+        "occupied_bins": 249,
+        "overopen_lid_nm": 3.661,
+        "gpu_hours": 16.29,
+        "knowledge": "wrong CVs (intra-CORE distances)"
+      },
+      {
+        "key": "F_gamd",
+        "title": "F dihedral GaMD",
+        "reach_closed_A": 3.48,
+        "frac_closed": 0.0003,
+        "occupied_bins": 198,
+        "overopen_lid_nm": 3.659,
+        "gpu_hours": 14.57,
+        "knowledge": "none (dihedral boost)"
+      },
+      {
+        "key": "A_unbiased",
+        "title": "A unbiased MD",
+        "reach_closed_A": 3.86,
+        "frac_closed": 0.0,
+        "occupied_bins": 212,
+        "overopen_lid_nm": 3.561,
+        "gpu_hours": 13.52,
+        "knowledge": "none (apo MD)"
+      },
+      {
+        "key": "E_stemper",
+        "title": "E simulated tempering",
+        "reach_closed_A": 5.83,
+        "frac_closed": 0.0,
+        "occupied_bins": 268,
+        "overopen_lid_nm": 4.152,
+        "gpu_hours": 13.87,
+        "knowledge": "none (T ladder 300\u2013400 K)"
+      }
+    ]
+  }
+}
