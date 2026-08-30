@@ -56,7 +56,7 @@ Typical throughput on an RTX 4090 (OpenCL) was 430–535 ns/day.
 
 ## How to cite
 
-If you use these scripts or the AdK comparison numbers, please cite the article (Zhao, Cui, and Li) and this repository. A `CITATION.cff` file is included.
+If you use these scripts or the AdK comparison numbers, please cite the article (Zhao, Cui, and Li) and this repository: https://github.com/liying0128/adk-conformational-sampling
 
 ## License
 
